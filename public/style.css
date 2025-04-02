@@ -1,0 +1,85 @@
+.title{
+    color:rgb(255, 255, 255);
+    text-decoration-line: underline;
+}
+
+.title2{
+    text-decoration: none;
+    text-align: center;
+}
+
+.nav-link{
+    font-size: larger;
+    font-weight: 500;
+    transition: 0.5s;
+
+}
+
+.nav-link:hover{
+    font-weight: 700;
+    background-color: rgba(218, 149, 253, 0.496);
+    border-radius: 50%;
+
+}
+
+ul{
+    list-style: none; 
+}
+
+ul li{
+   padding: 10px;
+}
+
+.bg-body{
+    background-color: rgb(107 67 109 / 89%) !important;
+}
+
+.background{
+    background-image: url(background.png);
+}
+
+.navbar-brand img{
+    height: 50px;
+    width: auto;
+}
+
+.custom-card{
+    width: auto;
+    height: auto; 
+}
+
+.card-style{
+    font-size: larger;
+    font-weight: 700;
+    padding: 0%;
+}
+
+.card-color{
+    color: transparent;
+}
+
+p{
+    color: white;
+    text-align: center;
+    align-items: center;
+}
+
+.card2{
+    background-color: transparent;
+}
+
+.contact-icons{
+    padding: 15px;
+    margin: 10px;
+    width: 65px;
+    height: auto;
+    transition: 0.4s;
+}
+
+.contact-icons:hover{
+    padding: 15px;
+    margin: 10px;
+    width: 80px;
+    height: auto;
+    cursor: pointer;
+}

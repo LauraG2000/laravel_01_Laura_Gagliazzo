@@ -1,0 +1,28 @@
+- HTTP è il protocollo di rete appartenente al livello di applicazione del modello ISO/OSI su cui è basato il web
+- HTML è il linguaggio di markup con cui sono scritte e descritte le pagine web
+- URL è lo schema di identificazione, e quindi di rintracciabilità, dei contenuti e dei servizi del web
+
+1- HTTP:
+- Alla base del modello clinet/server, (sessione HTTP) due tipi di messaggi: 
+                                                                a/ Richiesta
+                                                                b/ Risposta
+- E' di natura stateless (non è nato per salvare i dati, infatti vengono usati per esempio i cookies)
+- Messaggio di richiesta: 
+                Riga di richiesta: - Metodo [GET (prendere), POST (spedire), sotto metodi di POST: PUT (modifico, aggiungendo), DELETE (eliminare)]
+                Sezione Header (Host, User Agent)
+                Body
+- Il GET non ha un body ma tutto quello che cosnegue si, dopo l'Header
+- Messaggio di risposta :
+                Riga di stato: 
+                                1xx = messaggi infotmativi
+                                2xx = successo (richiesta soddisfatta)
+                                3xx = redicret (non c'è risposta immediata, ma viene detto come ottenere risposta)
+                                4xx = client error (richiesta non soddisfatta perchè sbagliata)
+                                5xx = client error (richiesta non soddisfatta per problema interno del server)
+                Sezione Header:
+                                - Server
+                                - Content Typr
+                Body;
+- Come si comunica con internet? tramite indirizzo IP (internet protocol), si tratta di un numero univoco identificativo, scritto in numero binario.
+- Il binario viene trasformato in decimale, poi grazie al domain name system (DNS), verificando il numero identificativo va ad associare il nominativo, compresnibile e gestibile lato client.
+- Laravel funziona con la convenzione più importante della configurazione
