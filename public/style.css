@@ -1,12 +1,33 @@
+/* Fonts */
+
+body {
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-image: url(background.png);
+  }
+
 .title{
     color:rgb(255, 255, 255);
     text-decoration-line: underline;
+    font-weight: 700;
+    font-size: 40px;
+
 }
 
 .title2{
+    color:rgb(255, 255, 255);
     text-decoration: none;
     text-align: center;
 }
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1020; 
+  }
+  
 
 .nav-link{
     font-size: larger;
@@ -17,7 +38,7 @@
 
 .nav-link:hover{
     font-weight: 700;
-    background-color: rgba(218, 149, 253, 0.496);
+    background-color: rgba(243, 152, 250, 0.315);
     border-radius: 50%;
 
 }
@@ -31,11 +52,12 @@ ul li{
 }
 
 .bg-body{
-    background-color: rgb(107 67 109 / 89%) !important;
+    background-color: rgb(134, 58, 222) !important;
 }
 
 .background{
-    background-image: url(background.png);
+   background-color: transparent;
+
 }
 
 .navbar-brand img{
@@ -54,9 +76,24 @@ ul li{
     padding: 0%;
 }
 
-.card-color{
-    color: transparent;
+.card-service {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(34, 14, 63, 0.774);
+    width: 100%;
+    max-width: none;
 }
+
+
+.card-img-top {
+    width: 300px; 
+    max-width: 100%; 
+    height: auto;
+    margin: 0 auto; 
+    display: block;
+}
+
 
 p{
     color: white;
@@ -65,7 +102,9 @@ p{
 }
 
 .card2{
-    background-color: transparent;
+    background-color: rgba(36, 37, 94, 0.727);
+    border: none;
+    border-radius: 30%;
 }
 
 .contact-icons{
@@ -82,4 +121,122 @@ p{
     width: 80px;
     height: auto;
     cursor: pointer;
+}
+
+.button-custom{
+    border: transparent;
+    background-color:rgb(36, 37, 94);
+    border-radius: 60%;
+    margin-top: 10%;
+}
+
+.a-style{
+    color: white;
+    text-decoration: none;
+    margin: auto;
+    align-items: center;
+    word-wrap: break-word;
+    white-space: normal; 
+}
+
+.p-style{
+    margin: auto;
+    padding: 5%;
+
+}
+
+.button-custom:hover{
+    background-color: rgb(134, 58, 222);
+}
+
+
+table {
+    background-color: transparent;
+}
+
+.col {
+    background-color: transparent !important;
+}
+
+.icon-custom{
+    width: 200px;
+    height: auto;
+    transition: 0.4s;
+}
+
+.background2{
+    background-image: url(background2.png );
+}
+
+.col-custom {
+    transition: transform 0.5s ease;
+}
+  
+.col-custom:hover {
+    transform: scale(1.1);
+}
+
+.button-custom2{
+    background-color:transparent;
+    border-radius: 50%;
+    border: none;
+    transition: 0.3s;
+    margin-left: 50%;
+    margin-bottom: 10%;
+}
+
+.button-custom2:hover{
+    background-color: transparent;
+    border: solid yellow 2px;
+}
+
+.p-custom{
+    text-shadow: 3px 3px 8px rgb(24, 24, 24);
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.row-customize{
+    padding: 5%;
+}
+
+.row{
+    margin: auto;
+}
+
+.a-custom{
+    color: yellow;
+}
+
+.a-location{
+    text-decoration: none;
+}
+
+.a-location:hover{
+    text-decoration: underline;
+    color: yellow;
+}
+
+.dropdown-menu{
+    background-color: rgb(134, 58, 222);
+    border-radius: 5%;
+    border: none;
+}
+
+.dropdown-item{
+    transition: 0.3s;
+}
+
+.dropdown-item:hover{
+    background-color:rgba(243, 152, 250, 0.315);
+    border-radius: 50%;
+}
+
+.h5-custom{
+    color: white;
+}
+
+.btn-custom{
+    --bs-btn-padding-x: 5rem;
+    --bs-btn-padding-y: 0.300rem;
 }
