@@ -1,98 +1,16 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PublicController;
+use App\Http\Controllers\ServicesController;
 
-Route::get('/', function () {
-    $title = 'HACK142';
-    $logo = asset('logo.png'); 
+// ROTTE GENERALI - PublicController
+Route::get('/', [PublicController::class, 'homepage'])->name('home');
+Route::get('/chi-siamo', [PublicController::class, 'chiSiamo'])->name('chi-siamo');
+Route::get('/dove-ci-troviamo', [PublicController::class, 'doveCiTroviamo'])->name('dove-ci-troviamo');
 
-    return view('welcome', ['title' => $title, 'logo' => $logo]); 
-})->name('home'); 
-
-Route::get('/chi-siamo', function(){
-    $arrayTeachers = [
-        ['name'=> 'Giulio' , 'surname' => htmlspecialchars('Rossi:'), 'testo' => 'Insegnante Front-end'],
-        ['name'=>'Anna' , 'surname' => htmlspecialchars('Verdi:'), 'testo' => 'Insegnante Back-end'],
-        ['name'=>'Michela' , 'surname' => htmlspecialchars('Bianchi:'), 'testo' => 'Insegnante Front-end'],
-        ['name'=>'Luca' , 'surname' => htmlspecialchars('Esposito:'), 'testo' => 'Insegnante Back-end'],
-    ];
-
-    $logo = asset('logo.png'); 
-    $team = asset('team.png');
-
-    return view('chiSiamo' , ['teachers' => $arrayTeachers, 'logo' => $logo, 'team' => $team]);
-})->name('chi-siamo');
-
-Route::get('/dove-ci-troviamo', function(){
-    $title = 'Dove ci troviamo';
-    $logo = asset('logo.png'); 
-    $location = asset('location.png');
-    $loc = asset('loc.png');
-    $number = asset('number.png');
-    $mail = asset('mail.png');
-
-    return view('doveCiTroviamo', ['titolo' => $title, 'logo' => $logo, 'location' => $location, 'loc' => $loc, 'number' => $number, 'mail' => $mail]);
-})->name('dove-ci-troviamo');
-
-Route::get('/i-nostri-corsi', function(){
-    $p1 = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis?
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis?';
-    $p2 = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis?
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis?';
-    $p3 = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis?
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis?';
-    $p4 = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis?
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis?';
-    $logo = asset('logo.png');
-    $analyst = asset('analyst.png');
-    $ai = asset('ai.png');
-    $design = asset('design.png');
-    $web = asset('web.png');
-
-    return view('iNostriCorsi', ['logo' => $logo, 'analyst' => $analyst, 'ai' => $ai, 'design' => $design, 'web' => $web, 'p1' => $p1, 'p2' => $p2, 'p3' => $p3, 'p4' => $p4]);
-})->name('i-nostri-corsi');
-
-Route::get('/data-analyst', function(){
-    $subtitle = 'Corso Data Analyst';
-    $logo = asset('logo.png');
-    $analyst = asset('analyst.png');
-    $pAnalyst = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis?
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis?
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis?';
-
-    return view('dataAnalyst', ['subtitle' => $subtitle, 'logo' => $logo, 'analyst' => $analyst, 'pAnalyst' => $pAnalyst]);
-})->name('data-analyst');
-
-Route::get('/i-a', function(){
-    $subtitle = 'Corso Intellgenza Artificiale';
-    $logo = asset('logo.png');
-    $ia = asset('ai.png');
-    $pIa = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis?
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis?
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis?';
-
-    return view('iA', ['subtitle' => $subtitle, 'logo' => $logo, 'ia' => $ia, 'pIa' => $pIa]);
-})->name('i-a');
-
-Route::get('/design', function(){
-    $subtitle = 'Corso UX/UI Design';
-    $logo = asset('logo.png');
-    $design = asset('design.png');
-    $pDesign = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis?
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis?
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis?';
-
-    return view('design', ['subtitle' => $subtitle, 'logo' => $logo, 'design' => $design, 'pDesign' => $pDesign]);
-})->name('design');
-
-Route::get('/web-developer', function(){
-    $subtitle = 'Corso Web Developer';
-    $logo = asset('logo.png');
-    $web = asset('web.png');
-    $pWeb = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis?
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis?
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique nesciunt eius fuga facilis?';
-
-    return view('web-developer', ['subtitle' => $subtitle, 'logo' => $logo, 'web' => $web, 'pWeb' => $pWeb]);
-})->name('web-developer');
-
+// ROTTE CORSI - ServicesController
+Route::get('/i-nostri-corsi', [ServicesController::class, 'iNostriCorsi'])->name('i-nostri-corsi');
+Route::get('/data-analyst', [ServicesController::class, 'dataAnalyst'])->name('data-analyst');
+Route::get('/i-a', [ServicesController::class, 'iA'])->name('i-a');
+Route::get('/design', [ServicesController::class, 'design'])->name('design');
+Route::get('/web-developer', [ServicesController::class, 'webDeveloper'])->name('web-developer');
