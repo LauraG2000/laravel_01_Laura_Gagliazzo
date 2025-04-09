@@ -22,44 +22,44 @@
 <body>
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg bg-body">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">
-                <img src="{{ $logo }}" alt="Logo" width="100">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">
-                            <i class="fa-solid fa-house" style="color: #94bdff;"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/chi-siamo">Chi siamo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/dove-ci-troviamo">Dove ci troviamo</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Servizi
-                        </a>
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{{ route('home') }}">
+            <img src="{{ $logo }}" alt="Logo" width="100">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ route('home') }}">
+                        <i class="fa-solid fa-house" style="color: #94bdff;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('chi-siamo') }}">Chi siamo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('dove-ci-troviamo') }}">Dove ci troviamo</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Servizi
+                    </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/data-analyst">Corso Data Analyst</a></li>
-                        <li><a class="dropdown-item" href="/i-a">Corso IA</a></li>
-                        <li><a class="dropdown-item" href="/design">Corso UX/UI Design</a></li>
-                        <li><a class="dropdown-item" href="/web-developer">Corso Web Developer</a></li>
+                        <li><a class="dropdown-item" href="{{ route('data-analyst') }}">Corso Data Analyst</a></li>
+                        <li><a class="dropdown-item" href="{{ route('i-a') }}">Corso IA</a></li>
+                        <li><a class="dropdown-item" href="{{ route('design') }}">Corso UX/UI Design</a></li>
+                        <li><a class="dropdown-item" href="{{ route('web-developer') }}">Corso Web Developer</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="/i-nostri-corsi">I nostri corsi</a></li>
+                        <li><a class="dropdown-item" href="{{ route('i-nostri-corsi') }}">I nostri corsi</a></li>
                     </ul>
-                    </li>
-                </ul>
-            </div>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 <!-- Navbar end-->
     
 <!-- Contenuto -->
@@ -72,10 +72,10 @@
                 </h1>
                 <div class="container text-center">
                     <div class="row row-cols-1 row-cols-md-2 align-items-center">
-                        <div class="col text-md-end">
+                        <div class="col text-md-end col-query1">
                             <img src="{{ $location }}" alt="Pc" width="400" class="img-fluid">
                         </div>
-                        <div class="col d-flex flex-column align-items-center">                            
+                        <div class="col d-flex flex-column align-items-center col-query2">                            
                             <!-- Cards -->
                             <div class="card card2" style="width: 200px">
                                 <a class= "a-location"href="https://www.google.com/maps/dir//Strada+S.+Giorgio+Martire,+2D,+70124+Bari+BA,+Italia/@41.1168123,16.767774,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x1347e8bcca130e17:0x47ce9d5124576e73!2m2!1d16.8501748!2d41.1168417?entry=ttu&g_ep=EgoyMDI1MDMzMC4wIKXMDSoASAFQAw%3D%3D{{ $loc }}">

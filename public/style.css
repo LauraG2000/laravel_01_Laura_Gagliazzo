@@ -6,6 +6,7 @@ body {
     font-weight: 400;
     font-style: normal;
     background-image: url(background.png);
+    background-color: rgb(34, 14, 64);
   }
 
 .title{
@@ -240,3 +241,44 @@ table {
     --bs-btn-padding-x: 5rem;
     --bs-btn-padding-y: 0.300rem;
 }
+/* Media queries */
+
+/* Tablet */
+@media (min-width: 481px) and (max-width: 768px) {
+    body {
+        font-size: 13px;
+      }
+  
+      .title{
+          font-size: 23px;
+      }
+  
+      .col-query1{
+          margin-bottom: 25%;
+      }
+  
+      .col-query2{
+          margin-bottom: 25%;
+      }
+  }
+
+
+/* Smartphone */
+@media (max-width: 480px) {
+    body {
+      font-size: 11px;
+    }
+
+    .title{
+        font-size: 20px;
+    }
+
+    .col-query1{
+        margin-bottom: 20%;
+    }
+
+    .col-query2{
+        margin-bottom: 20%;
+    }
+  }
+  

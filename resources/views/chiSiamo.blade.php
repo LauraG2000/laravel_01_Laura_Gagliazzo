@@ -21,10 +21,10 @@
 </head>
 
 <body>
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg bg-body">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">
+            <a class="navbar-brand" href="{{ route('home') }}">
                 <img src="{{ $logo }}" alt="Logo" width="100">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -34,34 +34,34 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">
+                        <a class="nav-link active" aria-current="page" href="{{ route('home') }}">
                             <i class="fa-solid fa-house" style="color: #94bdff;"></i>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/chi-siamo">Chi siamo</a>
+                        <a class="nav-link" href="{{ route('chi-siamo') }}">Chi siamo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/dove-ci-troviamo">Dove ci troviamo</a>
+                        <a class="nav-link" href="{{ route('dove-ci-troviamo') }}">Dove ci troviamo</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Servizi
                         </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/data-analyst">Corso Data Analyst</a></li>
-                        <li><a class="dropdown-item" href="/i-a">Corso IA</a></li>
-                        <li><a class="dropdown-item" href="/design">Corso UX/UI Design</a></li>
-                        <li><a class="dropdown-item" href="/web-developer">Corso Web Developer</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="/i-nostri-corsi">I nostri corsi</a></li>
-                    </ul>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ route('data-analyst') }}">Corso Data Analyst</a></li>
+                            <li><a class="dropdown-item" href="{{ route('i-a') }}">Corso IA</a></li>
+                            <li><a class="dropdown-item" href="{{ route('design') }}">Corso UX/UI Design</a></li>
+                            <li><a class="dropdown-item" href="{{ route('web-developer') }}">Corso Web Developer</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="{{ route('i-nostri-corsi') }}">I nostri corsi</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-<!-- Navbar end-->
+    <!-- Navbar end-->
 
     <!-- Chi siamo -->
     <div class="col container-fluid bg-body-secondary vh-50 background">
@@ -70,8 +70,9 @@
                 <h1 class="text-center py-5 title">CHI SIAMO</h1>
             </div>
         </div>
+    </div>
         
-        <!-- Cards -->
+    <!-- Cards -->
     <header>
         <div class="row justify-content-center">
             <div class="col-md-6 col-lg-4 custom-card">
@@ -98,13 +99,11 @@
                 </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
 
-<!-- JS Bootstrap -->
+    <!-- JS Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
-    
 </body>
 </html>
