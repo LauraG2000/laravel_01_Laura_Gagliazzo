@@ -19,8 +19,6 @@
     </div>
 </header>
 
-
-
 </x-layout>
 
 </html>

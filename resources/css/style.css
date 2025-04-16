@@ -5,7 +5,7 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    background-image: url(background.png);
+    background-image: url(/public/background.png);
     background-color: rgb(34, 14, 64);
   }
 
@@ -166,7 +166,7 @@ table {
 }
 
 .background2{
-    background-image: url(background2.png );
+    background-image: url(/public/background2.png);
 }
 
 .col-custom {

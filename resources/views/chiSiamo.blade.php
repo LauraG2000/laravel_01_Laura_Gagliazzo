@@ -1,5 +1,4 @@
 <x-layout>
-   
     <!-- Chi siamo -->
     <div class="col container-fluid bg-body-secondary vh-50 background">
         <div class="row justify-content-center">
