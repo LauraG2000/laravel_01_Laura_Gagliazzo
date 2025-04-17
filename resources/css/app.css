@@ -1,2 +1,8 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+/* Font Awesome */
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+/* Bootstrap css */
 @import "bootstrap/dist/css/bootstrap.min.css";
+/* My css */
 @import "./style.css";

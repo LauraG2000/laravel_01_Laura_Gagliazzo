@@ -261,6 +261,9 @@ table {
       .col-query2{
           margin-bottom: 25%;
       }
+      .background2{
+        background-image: none;
+    }
   }
 
 
@@ -280,6 +283,10 @@ table {
 
     .col-query2{
         margin-bottom: 20%;
+    }
+
+    .background2{
+        background-image: none;
     }
   }
   
